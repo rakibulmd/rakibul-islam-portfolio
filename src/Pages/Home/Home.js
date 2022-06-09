@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Shared/Header";
+import Contact from "./Contact";
 import Projects from "./Projects";
 import Showcase from "./Showcase";
 
@@ -9,6 +10,7 @@ const Home = () => {
             <Header></Header>
             <Showcase></Showcase>
             <Projects></Projects>
+            <Contact></Contact>
         </div>
     );
 };

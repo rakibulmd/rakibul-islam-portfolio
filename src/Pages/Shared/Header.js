@@ -13,9 +13,9 @@ const Header = () => {
                         <Link className="btn btn-sm btn-ghost" to="/">
                             About Me
                         </Link>
-                        <Link className="btn btn-sm btn-ghost" to="/">
+                        {/* <Link className="btn btn-sm btn-ghost" to="/">
                             Contact
-                        </Link>
+                        </Link> */}
                         <Link className="btn btn-sm btn-ghost" to="/">
                             Portfolio
                         </Link>
