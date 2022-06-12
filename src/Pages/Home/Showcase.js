@@ -7,8 +7,8 @@ const Showcase = () => {
     return (
         <div className="container mx-auto">
             <div className="flex flex-col md:flex-row justify-center items-center gap-7 md:gap-14 mt-16">
-                <div class="avatar">
-                    <div class="w-72 md:w-full  max-w-sm rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <div className="avatar">
+                    <div className="w-72 md:w-full  max-w-sm rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img} alt="" />
                     </div>
                 </div>

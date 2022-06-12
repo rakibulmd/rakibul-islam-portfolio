@@ -1,27 +1,52 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import file from "../../Asset/files/resume.pdf";
 import img from "../../Asset/img/rakibulmdgit.jpg";
 
 const Header = () => {
     const [navbarScrolled, setnavbarScrolled] = useState(false);
+    const navigate = useNavigate();
     useEffect(() => {
-        const changeNavbarColor = () => {
-            if (window.scrollY >= 80) {
+        const changeNavbarScroll = () => {
+            console.log(window.scrollY);
+            if (window.scrollY >= 120) {
                 setnavbarScrolled(true);
             } else {
                 setnavbarScrolled(false);
             }
         };
-        window.addEventListener("scroll", changeNavbarColor);
+        window.addEventListener("scroll", changeNavbarScroll);
     }, []);
+    const handleLogoClick = () => {
+        window.scrollTo(0, 0);
+        navigate("/");
+    };
     const navItems = (
         <>
             <li>
-                <a href="#projects">Item 1</a>
+                <Link className="text-lg hover:text-emerald-400" to="/">
+                    Home
+                </Link>
             </li>
             <li>
-                <a href="#projects">Item 1</a>
+                <a className="text-lg hover:text-emerald-400" href="#about">
+                    About
+                </a>
+            </li>
+            <li>
+                <a className="text-lg hover:text-emerald-400" href="#projects">
+                    Portfolio
+                </a>
+            </li>
+            <li>
+                <a className="text-lg  hover:text-emerald-400" href="#contact">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a className="text-lg  hover:text-emerald-400" href="#blogs">
+                    Blog
+                </a>
             </li>
         </>
     );
@@ -31,18 +56,21 @@ const Header = () => {
             id="header"
             className={
                 navbarScrolled
-                    ? "sticky top-0 z-50 bg-black/95 transition-all py-1"
-                    : "sticky top-0 z-50 py-2"
+                    ? "sticky top-0 z-50 bg-black/95"
+                    : "sticky top-0 z-50 "
             }
         >
             <div className="container mx-auto">
-                <div class="navbar">
-                    <div class="navbar-start">
-                        <div class="dropdown">
-                            <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <div className="navbar py-3">
+                    <div className="navbar-start">
+                        <div className="dropdown">
+                            <label
+                                tabIndex="0"
+                                className="btn btn-ghost lg:hidden"
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    class="h-5 w-5"
+                                    className="h-5 w-5"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -56,27 +84,30 @@ const Header = () => {
                                 </svg>
                             </label>
                             <ul
-                                tabindex="0"
-                                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                                tabIndex="0"
+                                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
                             >
                                 {navItems}
                             </ul>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <button
+                            onClick={handleLogoClick}
+                            className="flex items-center gap-2"
+                        >
                             <img
-                                className="w-10 rounded-full"
+                                className="w-10 h-10 rounded-full"
                                 alt="Rakibul Islam"
                                 src={img}
                             />{" "}
                             <span className="font-bold"> Rakibul</span>
-                        </div>
+                        </button>
                     </div>
-                    <div class="navbar-center hidden lg:flex">
-                        <ul class="menu menu-horizontal p-0">{navItems}</ul>
+                    <div className="navbar-center hidden lg:flex">
+                        <ul className="menu menu-horizontal p-0">{navItems}</ul>
                     </div>
-                    <div class="navbar-end">
+                    <div className="navbar-end">
                         <Link
-                            className="btn bg-emerald-600 hover:bg-emerald-500 text-white"
+                            className="btn bg-emerald-500 hover:bg-emerald-400 text-white"
                             to={file}
                             target="_blank"
                             download

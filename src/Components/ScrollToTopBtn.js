@@ -15,18 +15,12 @@ const ScrollToTopBtn = () => {
     }, []);
 
     return (
-        <div
-            className={
-                navbarScrolled
-                    ? "fixed bottom-7 right-5"
-                    : "hidden fixed bottom-7 right-5"
-            }
-        >
+        <div className={navbarScrolled ? "fixed bottom-7 right-7" : "hidden"}>
             <button
                 onClick={() => {
                     window.scrollTo(0, 0);
                 }}
-                className="btn bg-emerald-500  btn-circle shadow-3xl"
+                className="btn bg-emerald-600 border-0  btn-circle shadow-3xl"
             >
                 TOP
             </button>

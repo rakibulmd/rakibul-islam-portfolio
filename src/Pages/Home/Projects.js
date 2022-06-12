@@ -6,7 +6,7 @@ const Projects = () => {
         <div className="container mx-auto mt-14" id="projects">
             <h2 className="text-center text-4xl pb-5 mt-12">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-3">
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                <div className="card card-compact w-full bg-base-100 shadow-xl">
                     <figure>
                         <img
                             className="h-60"
@@ -14,8 +14,8 @@ const Projects = () => {
                             alt="Shoes"
                         />
                     </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Manufacturer website</h2>
+                    <div className="card-body">
+                        <h2 className="card-title">Manufacturer website</h2>
                         <p className="font-bold">
                             Order booking, payment,shipping and dashboard
                             features
@@ -27,19 +27,19 @@ const Projects = () => {
                             DaisyUI
                         </p>
 
-                        <div class="card-actions justify-end">
+                        <div className="card-actions justify-end">
                             <a
                                 target="_blank"
                                 rel="noreferrer"
                                 href="https://master-precision-tech.web.app/"
-                                class="btn btn-secondary"
+                                className="btn btn-secondary"
                             >
                                 See Details
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                <div className="card card-compact w-full bg-base-100 shadow-xl">
                     <figure>
                         <img
                             className="h-60"
@@ -47,8 +47,10 @@ const Projects = () => {
                             alt="Shoes"
                         />
                     </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Inventory Management System</h2>
+                    <div className="card-body">
+                        <h2 className="card-title">
+                            Inventory Management System
+                        </h2>
                         <p className="font-bold">
                             Manage, deliver, restock. Manage inventory easily!
                         </p>
@@ -58,24 +60,24 @@ const Projects = () => {
                             Firebase, REST API, JWT, Tailwind CSS
                         </p>
 
-                        <div class="card-actions justify-end">
+                        <div className="card-actions justify-end">
                             <a
                                 target="_blank"
                                 rel="noreferrer"
                                 href="https://ps-wms.web.app/"
-                                class="btn btn-secondary"
+                                className="btn btn-secondary"
                             >
                                 See Details
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                <div className="card card-compact w-full bg-base-100 shadow-xl">
                     <figure>
                         <img src={todo} alt="Shoes" />
                     </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Simple To Do App</h2>
+                    <div className="card-body">
+                        <h2 className="card-title">Simple To Do App</h2>
                         <p className="font-bold">
                             Create task, complete task, delete task. Simple!
                         </p>
@@ -101,12 +103,12 @@ const Projects = () => {
                                 </li>
                             </ul>
                         </div> */}
-                        <div class="card-actions justify-end">
+                        <div className="card-actions justify-end">
                             <a
                                 target="_blank"
                                 rel="noreferrer"
                                 href="https://up-keep-397c7.web.app/"
-                                class="btn btn-secondary"
+                                className="btn btn-secondary"
                             >
                                 See Details
                             </a>
