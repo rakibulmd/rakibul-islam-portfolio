@@ -1,4 +1,5 @@
 import React from "react";
+import todo from "../../Asset/img/todo.jpg";
 
 const Projects = () => {
     return (
@@ -8,7 +9,8 @@ const Projects = () => {
                 <div class="card card-compact w-full bg-base-100 shadow-xl">
                     <figure>
                         <img
-                            src="https://api.lorem.space/image/shoes?w=400&h=225"
+                            className="h-60"
+                            src="https://user-images.githubusercontent.com/96826691/170514461-f36c29f2-0c53-4901-a68c-96d16a9b8848.png"
                             alt="Shoes"
                         />
                     </figure>
@@ -18,47 +20,69 @@ const Projects = () => {
                             Order booking, payment,shipping and dashboard
                             features
                         </p>
-
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-secondary">
-                                See Details
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-compact w-full bg-base-100 shadow-xl">
-                    <figure>
-                        <img
-                            src="https://api.lorem.space/image/shoes?w=400&h=225"
-                            alt="Shoes"
-                        />
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Manufacturer website</h2>
-                        <p className="font-bold">
-                            Order booking, payment,shipping and dashboard
-                            features
+                        <p className="py-2">
+                            <span className="font-bold">Technology Used:</span>{" "}
+                            React.js, Node.js, Express.js, MongoDB, Firebase,
+                            REST API, JWT, React Query, Axios, Tailwind CSS,
+                            DaisyUI
                         </p>
 
                         <div class="card-actions justify-end">
-                            <button class="btn btn-secondary">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://master-precision-tech.web.app/"
+                                class="btn btn-secondary"
+                            >
                                 See Details
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="card card-compact w-full bg-base-100 shadow-xl">
                     <figure>
                         <img
-                            src="https://api.lorem.space/image/shoes?w=400&h=225"
+                            className="h-60"
+                            src="https://user-images.githubusercontent.com/96826691/167287754-e4236b50-4149-4c27-994d-9dfc65c4afbb.jpeg"
                             alt="Shoes"
                         />
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title">Manufacturer website</h2>
+                        <h2 class="card-title">Inventory Management System</h2>
                         <p className="font-bold">
-                            Order booking, payment,shipping and dashboard
-                            features
+                            Manage, deliver, restock. Manage inventory easily!
+                        </p>
+                        <p className="py-2">
+                            <span className="font-bold">Technology Used:</span>{" "}
+                            React.js, Node.js, Express.js, MongoDB, Recharts,
+                            Firebase, REST API, JWT, Tailwind CSS
+                        </p>
+
+                        <div class="card-actions justify-end">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://ps-wms.web.app/"
+                                class="btn btn-secondary"
+                            >
+                                See Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-compact w-full bg-base-100 shadow-xl">
+                    <figure>
+                        <img src={todo} alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Simple To Do App</h2>
+                        <p className="font-bold">
+                            Create task, complete task, delete task. Simple!
+                        </p>
+                        <p className="py-2">
+                            <span className="font-bold">Technology Used:</span>{" "}
+                            React.js, Express.js, MongoDB, Firebase, REST API,
+                            JWT, Tailwind CSS
                         </p>
                         {/* <div className="p-3">
                             <ul className="list-disc">
@@ -78,9 +102,14 @@ const Projects = () => {
                             </ul>
                         </div> */}
                         <div class="card-actions justify-end">
-                            <button class="btn btn-secondary">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://up-keep-397c7.web.app/"
+                                class="btn btn-secondary"
+                            >
                                 See Details
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

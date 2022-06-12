@@ -4,7 +4,7 @@ import Home from "./Pages/Home/Home";
 
 function App() {
     return (
-        <div>
+        <div className="bg-gradient-to-l from-primary via-accent to-secondary text-white">
             <Routes>
                 <Route path="/" element={<Home></Home>}></Route>
                 <Route path="/Home" element={<Home></Home>}></Route>

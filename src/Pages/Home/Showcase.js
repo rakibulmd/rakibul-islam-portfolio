@@ -13,7 +13,10 @@ const Showcase = () => {
                     </div>
                 </div>
                 <div className="1">
-                    <h2 className="text-5xl pb-4">Hi! I'm Rakibul</h2>
+                    <h2 className="text-5xl pb-4">
+                        Hi! I'm{" "}
+                        <span className="text-primary font-bold">Rakibul</span>
+                    </h2>
                     <h2 className="text-3xl pb-5">Full Stack Web Developer</h2>
                     <Link
                         className="btn btn-primary"
