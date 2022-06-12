@@ -3,7 +3,7 @@ import todo from "../../Asset/img/todo.jpg";
 
 const Projects = () => {
     return (
-        <div className="container mx-auto mt-14">
+        <div className="container mx-auto mt-14" id="projects">
             <h2 className="text-center text-4xl pb-5 mt-12">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-3">
                 <div class="card card-compact w-full bg-base-100 shadow-xl">

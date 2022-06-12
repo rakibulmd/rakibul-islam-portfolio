@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollToTopBtn from "../../Components/ScrollToTopBtn";
 import Header from "../Shared/Header";
 import Contact from "./Contact";
 import Projects from "./Projects";
@@ -11,6 +12,7 @@ const Home = () => {
             <Showcase></Showcase>
             <Projects></Projects>
             <Contact></Contact>
+            <ScrollToTopBtn></ScrollToTopBtn>
         </div>
     );
 };

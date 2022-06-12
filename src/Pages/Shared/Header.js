@@ -1,9 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import file from "../../Asset/files/resume.pdf";
+import img from "../../Asset/img/rakibulmdgit.jpg";
 
 const Header = () => {
+    const [navbarScrolled, setnavbarScrolled] = useState(false);
+    useEffect(() => {
+        const changeNavbarColor = () => {
+            if (window.scrollY >= 80) {
+                setnavbarScrolled(true);
+            } else {
+                setnavbarScrolled(false);
+            }
+        };
+        window.addEventListener("scroll", changeNavbarColor);
+    }, []);
+    const navItems = (
+        <>
+            <li>
+                <a href="#projects">Item 1</a>
+            </li>
+            <li>
+                <a href="#projects">Item 1</a>
+            </li>
+        </>
+    );
+
     return (
-        <header className="">
+        <header
+            id="header"
+            className={
+                navbarScrolled
+                    ? "sticky top-0 z-50 bg-black/95 transition-all py-1"
+                    : "sticky top-0 z-50 py-2"
+            }
+        >
             <div className="container mx-auto">
                 <div class="navbar">
                     <div class="navbar-start">
@@ -28,72 +59,30 @@ const Header = () => {
                                 tabindex="0"
                                 class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
                             >
-                                <li>
-                                    <a>Item 1</a>
-                                </li>
-                                <li tabindex="0">
-                                    <a class="justify-between">
-                                        Parent
-                                        <svg
-                                            class="fill-current"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                                        </svg>
-                                    </a>
-                                    <ul class="p-2">
-                                        <li>
-                                            <a>Submenu 1</a>
-                                        </li>
-                                        <li>
-                                            <a>Submenu 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a>Item 3</a>
-                                </li>
+                                {navItems}
                             </ul>
                         </div>
-                        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                        <div class="flex items-center gap-2">
+                            <img
+                                className="w-10 rounded-full"
+                                alt="Rakibul Islam"
+                                src={img}
+                            />{" "}
+                            <span className="font-bold"> Rakibul</span>
+                        </div>
                     </div>
                     <div class="navbar-center hidden lg:flex">
-                        <ul class="menu menu-horizontal p-0">
-                            <li>
-                                <a>Item 1</a>
-                            </li>
-                            <li tabindex="0">
-                                <a>
-                                    Parent
-                                    <svg
-                                        class="fill-current"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                                    </svg>
-                                </a>
-                                <ul class="p-2">
-                                    <li>
-                                        <a>Submenu 1</a>
-                                    </li>
-                                    <li>
-                                        <a>Submenu 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a>Item 3</a>
-                            </li>
-                        </ul>
+                        <ul class="menu menu-horizontal p-0">{navItems}</ul>
                     </div>
                     <div class="navbar-end">
-                        <a class="btn">Get started</a>
+                        <Link
+                            className="btn bg-emerald-600 hover:bg-emerald-500 text-white"
+                            to={file}
+                            target="_blank"
+                            download
+                        >
+                            Resume
+                        </Link>
                     </div>
                 </div>
             </div>
