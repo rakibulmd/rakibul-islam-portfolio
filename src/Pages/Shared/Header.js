@@ -24,27 +24,42 @@ const Header = () => {
     const navItems = (
         <>
             <li>
-                <Link className="text-lg hover:text-emerald-400" to="/">
+                <Link
+                    className="text-lg hover:text-emerald-400 font-bold uppercase"
+                    to="/"
+                >
                     Home
                 </Link>
             </li>
             <li>
-                <a className="text-lg hover:text-emerald-400" href="#about">
+                <a
+                    className="text-lg hover:text-emerald-400 font-bold uppercase"
+                    href="#about"
+                >
                     About
                 </a>
             </li>
             <li>
-                <a className="text-lg hover:text-emerald-400" href="#projects">
+                <a
+                    className="text-lg hover:text-emerald-400 font-bold uppercase"
+                    href="#projects"
+                >
                     Portfolio
                 </a>
             </li>
             <li>
-                <a className="text-lg  hover:text-emerald-400" href="#contact">
+                <a
+                    className="text-lg  hover:text-emerald-400 font-bold uppercase"
+                    href="#contact"
+                >
                     Contact
                 </a>
             </li>
             <li>
-                <a className="text-lg  hover:text-emerald-400" href="#blogs">
+                <a
+                    className="text-lg  hover:text-emerald-400 font-bold uppercase"
+                    href="#blogs"
+                >
                     Blog
                 </a>
             </li>
@@ -56,8 +71,8 @@ const Header = () => {
             id="header"
             className={
                 navbarScrolled
-                    ? "sticky top-0 z-50 bg-black/95"
-                    : "sticky top-0 z-50 "
+                    ? "sticky top-0 z-50 bg-gray-900 transition-all"
+                    : "sticky top-0 z-50 transition-all"
             }
         >
             <div className="container mx-auto">
