@@ -71,21 +71,21 @@ const Header = () => {
             id="header"
             className={
                 navbarScrolled
-                    ? "sticky top-0 z-50 bg-gray-900 transition-all"
+                    ? "sticky top-0 z-50 bg-gray-900/90 backdrop-blur shadow-lg transition-all"
                     : "sticky top-0 z-50 transition-all"
             }
         >
             <div className="container mx-auto">
-                <div className="navbar py-3">
+                <div className="navbar py-4">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <label
                                 tabIndex="0"
-                                className="btn btn-ghost lg:hidden"
+                                className="btn btn-ghost lg:hidden bg-emerald-500 mr-3"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
+                                    className="h-8 w-8"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -93,14 +93,14 @@ const Header = () => {
                                     <path
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
-                                        stroke-width="2"
+                                        stroke-width="3"
                                         d="M4 6h16M4 12h8m-8 6h16"
                                     />
                                 </svg>
                             </label>
                             <ul
                                 tabIndex="0"
-                                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                                className="menu  dropdown-content mt-5 p-2 shadow-lg bg-gray-900/95 rounded-box w-52  text-white backdrop-blur"
                             >
                                 {navItems}
                             </ul>
@@ -122,7 +122,7 @@ const Header = () => {
                     </div>
                     <div className="navbar-end">
                         <Link
-                            className="btn bg-emerald-500 hover:bg-emerald-400 text-white"
+                            className="btn bg-emerald-500 hover:bg-emerald-400 text-white border-none"
                             to={file}
                             target="_blank"
                             download
