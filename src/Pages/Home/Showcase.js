@@ -8,14 +8,16 @@ const Showcase = () => {
         <div className="container mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-7 md:gap-14 mt-24">
                 <div className="py-5 px-2 flex-1">
-                    <h2 className="text-5xl pb-7 font-bold">Hello,</h2>
-                    <h2 className="text-8xl pb-4 font-bold tracking-wider">
+                    <h2 className="text-3xl md:text-5xl mb-8 font-bold">
+                        Hello,
+                    </h2>
+                    <h2 className="text-5xl md:text-6xl pb-3 lg:text-8xl font-bold tracking-wider">
                         I'm Rakibul
                     </h2>
-                    <h2 className="text-5xl pb-4 text-emerald-400 font-bold  tracking-wider">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 text-emerald-400 font-bold  tracking-wider">
                         Web Developer
                     </h2>
-                    <p className="text-2xl pb-7 tracking-wide">
+                    <p className="text-xl md:text-2xl py-7 tracking-wide">
                         Passionate web developer developing state of the art web
                         application
                     </p>
@@ -36,7 +38,7 @@ const Showcase = () => {
                         </a>
                     </div>
                 </div>
-                <div className="avatar flex-1">
+                <div className="avatar flex-1 p-5">
                     <div className="w-full  max-w-md rounded-full ring ring-emerald-500 ring-offset-base-100 ring-offset-2">
                         <img src={img} alt="" />
                     </div>

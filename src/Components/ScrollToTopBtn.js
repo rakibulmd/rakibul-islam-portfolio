@@ -3,17 +3,18 @@ import { BsChevronDoubleUp } from "react-icons/bs";
 import "animate.css";
 
 const ScrollToTopBtn = () => {
-    const [navbarScrolled, setnavbarScrolled] = useState(false);
+    const [navbarScrolled, setNavbarScrolled] = useState(false);
 
     useEffect(() => {
         const changeNavbarColor = () => {
-            if (window.scrollY >= window.innerHeight) {
-                setnavbarScrolled(true);
+            if (window.scrollY >= window.innerHeight / 2) {
+                setNavbarScrolled(true);
             } else {
-                setnavbarScrolled(false);
+                setNavbarScrolled(false);
             }
         };
         window.addEventListener("scroll", changeNavbarColor);
+        console.log(window);
     }, []);
 
     return (
@@ -25,7 +26,7 @@ const ScrollToTopBtn = () => {
                 }}
                 className="btn bg-emerald-600 border-0  btn-circle shadow-3xl overflow-hidden animate__animated  animate__fadeInUp animate__fast"
             >
-                <BsChevronDoubleUp className="text-3xl"></BsChevronDoubleUp>
+                <BsChevronDoubleUp className="text-4xl"></BsChevronDoubleUp>
             </button>
         </div>
     );

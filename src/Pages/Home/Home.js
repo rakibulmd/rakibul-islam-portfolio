@@ -9,7 +9,9 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
+
             <Showcase></Showcase>
+
             <Projects></Projects>
             <Contact></Contact>
             <ScrollToTopBtn></ScrollToTopBtn>

@@ -8,7 +8,6 @@ const Header = () => {
     const navigate = useNavigate();
     useEffect(() => {
         const changeNavbarScroll = () => {
-            console.log(window.scrollY);
             if (window.scrollY >= 120) {
                 setnavbarScrolled(true);
             } else {
@@ -93,14 +92,14 @@ const Header = () => {
                                     <path
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
-                                        stroke-width="3"
+                                        stroke-width="2.5"
                                         d="M4 6h16M4 12h8m-8 6h16"
                                     />
                                 </svg>
                             </label>
                             <ul
                                 tabIndex="0"
-                                className="menu  dropdown-content mt-5 p-2 shadow-lg bg-gray-900/95 rounded-box w-52  text-white backdrop-blur"
+                                className="menu  dropdown-content mt-6 p-2 shadow-lg bg-gray-900/95 rounded-box w-52  text-white backdrop-blur"
                             >
                                 {navItems}
                             </ul>
