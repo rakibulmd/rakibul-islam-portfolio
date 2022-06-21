@@ -6,7 +6,7 @@ const Projects = () => {
         <div className="container mx-auto mt-14" id="projects">
             <h2 className="text-center text-4xl pb-5 mt-12">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-3">
-                <div className="card card-compact w-full bg-base-100 shadow-xl">
+                <div className="card card-compact w-full bg-base-100/10 shadow-xl">
                     <figure>
                         <img
                             className="h-60"
@@ -39,7 +39,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card card-compact w-full bg-base-100 shadow-xl">
+                <div className="card card-compact w-full bg-base-100/10 shadow-xl">
                     <figure>
                         <img
                             className="h-60"
@@ -72,7 +72,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card card-compact w-full bg-base-100 shadow-xl">
+                <div className="card card-compact w-full bg-base-100/10 shadow-xl">
                     <figure>
                         <img src={todo} alt="Shoes" />
                     </figure>

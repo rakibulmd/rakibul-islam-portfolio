@@ -49,17 +49,18 @@ const Contact = () => {
     return (
         <div className="container mx-auto py-12">
             <h2 className="text-center text-4xl pb-5 mt-12">Contact Me</h2>
-            <div className="max-w-[500px] mx-auto px-2">
-                <div className="p-5 bg-white rounded-md border border-gray-700">
+            <div className="max-w-[400px] mx-auto px-2">
+                <div className="p-5 bg-white/10 rounded-md border border-gray-700">
                     <form ref={form} onSubmit={sendEmail}>
                         <div className="mb-5">
                             <label>Name</label>
                             <div>
                                 <input
-                                    className="w-3/4 border rounded p-1 border-gray-400 focus:border-green-400 text-black placeholder-gray-400 outline-none"
+                                    className="w-full border rounded p-1 border-gray-400 focus:border-green-400 text-black placeholder-gray-400 outline-none"
                                     border
                                     type="text"
                                     name="user_name"
+                                    required
                                 />
                             </div>
                         </div>
@@ -67,8 +68,9 @@ const Contact = () => {
                             <label>Email</label>
                             <div>
                                 <input
-                                    className="w-3/4  border rounded p-1 border-gray-400 focus:border-green-400 text-black placeholder-gray-400 outline-none"
+                                    className="w-full  border rounded p-1 border-gray-400 focus:border-green-400 text-black placeholder-gray-400 outline-none"
                                     type="email"
+                                    required
                                     name="user_email"
                                 />
                             </div>
@@ -77,13 +79,13 @@ const Contact = () => {
                             <label>Message</label>
                             <div>
                                 <textarea
-                                    className="w-3/4 py-2 border rounded p-1 border-gray-400 focus:border-green-400 text-black placeholder-gray-400 outline-none"
+                                    className="w-full py-2 border rounded p-1 border-gray-400 focus:border-green-400 text-black placeholder-gray-400 outline-none"
                                     name="message"
                                 />
                             </div>
                         </div>
                         <input
-                            className="btn btn-primary"
+                            className="btn btn-secondary"
                             type="submit"
                             value="Send"
                         />

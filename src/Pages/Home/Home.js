@@ -13,7 +13,10 @@ const Home = () => {
 
             <Showcase></Showcase>
             <Skills></Skills>
-
+            <h2 className="text-3xl text-center py-5">
+                '' This Site is under construction, features that are not
+                working will be working soon. ''
+            </h2>
             <Projects></Projects>
             <Contact></Contact>
             <ScrollToTopBtn></ScrollToTopBtn>
